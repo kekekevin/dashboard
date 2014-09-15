@@ -9,6 +9,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'haml-rails'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-reddit', :git => 'git://github.com/jackdempsey/omniauth-reddit.git'
+gem 'figaro'
 
 group :developement do
   gem 'sqlite3'  
