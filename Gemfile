@@ -13,7 +13,8 @@ gem 'omniauth'
 gem 'omniauth-reddit', :git => 'git://github.com/jackdempsey/omniauth-reddit.git'
 gem 'figaro'
 
-group :developement do
+group :developement, :test do
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'sqlite3'  
 end
 

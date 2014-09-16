@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140911205022) do
+ActiveRecord::Schema.define(version: 20140915164548) do
+
+  create_table "reddit_auths", force: true do |t|
+    t.string   "access_token"
+    t.integer  "user_id"
+    t.string   "token_type"
+    t.decimal  "expires_in"
+    t.string   "scope"
+    t.string   "refresh_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reddit_auths", ["user_id"], name: "index_reddit_auths_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
